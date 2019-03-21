@@ -30,11 +30,15 @@ export class InfoService {
   // @param {SearchType} type movie, series, episode or empty
   // @returns Observable with the search results
   searchData(title: string, type: SearchType): Observable<any> {
-    return this.http.get(`${this.url}?s=${encodeURI(title)}&type=${type}&apikey=${this.apiKey}`).pipe(
-      map(results => results['Search'])
+    return this.http.get(`${this.url}?s=${encodeURI(title)}&type=${type}&apikey=${this.apiKey}`)
+      .pipe(
+        map(results => {
+          console.log('RAW: ', results);
+          return results['Search'];
+        })
       );
   }
-  // Get detailed information using the "id" parameter
+  // Get detailed information using the "i" (not "id") parameter
   // @param {string} id imdbID to retrieve information
   // @returns Observable with detailed information
   getDetails(id) {

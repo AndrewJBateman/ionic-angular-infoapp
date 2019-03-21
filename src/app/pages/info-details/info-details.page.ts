@@ -8,6 +8,7 @@ import { InfoService } from './../../services/info.service';
   templateUrl: './info-details.page.html',
   styleUrls: ['./info-details.page.scss'],
 })
+
 export class InfoDetailsPage implements OnInit {
 
   information = null;
@@ -21,12 +22,10 @@ export class InfoDetailsPage implements OnInit {
     // Get the information from the API
     this.infoService.getDetails(id).subscribe(result => {
       this.information = result;
-      console.log(result);
     });
   }
 
   openWebsite() {
     window.open(this.information.Website, '_blank');
   }
-  }
-
+}

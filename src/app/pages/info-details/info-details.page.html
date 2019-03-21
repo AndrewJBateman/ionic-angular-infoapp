@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons>
+    <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
     <ion-title>{{ information?.Genre }}</ion-title>
@@ -9,28 +9,41 @@
 
 <ion-content padding>
 
-<ion-card *ngIf="information">
-  <ion-card-header>
-    <ion-card-title>
-      {{ information.Title }}
-    </ion-card-title>
-    <ion-card-subtitle>
-      {{ information.Year }}
-    </ion-card-subtitle>
-  </ion-card-header>
+  <ion-card *ngIf="information">
+    <ion-card-header>
+      <ion-card-title>
+        {{ information.Title }}
+      </ion-card-title>
+      <ion-card-subtitle>
+        {{ information.Year }}
+      </ion-card-subtitle>
+    </ion-card-header>
 
-  <ion-card-content text-center>
-    <img [src]="information.Poster" class="info.img">
-      {{ information.Plot }}
+    <ion-card-content text-center>
+      <img [src]="information.Poster" class="info-img">
+        {{ information.Plot }}
 
-    <ion-item lines="none">
-      <ion-icon></ion-icon>
-      <ion-label></ion-label>
-    </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="star-half" slot="start"></ion-icon>
+        <ion-label>{{ information.imdbRating }}</ion-label>
+      </ion-item>
 
+      <ion-item lines="none">
+        <ion-icon name="clipboard" slot="start"></ion-icon>
+        <ion-label text-wrap>{{ information.Director }}</ion-label>
+      </ion-item>
 
-  </ion-card-content>
+      <ion-item lines="none">
+        <ion-icon name="contacts" slot="start"></ion-icon>
+        <ion-label text-wrap>{{ information.Actors }}</ion-label>
+      </ion-item>
 
-</ion-card>
+      <ion-button expand="full" (click)="openWebsite()" *ngIf="information.Website && information.Website !='N/A'">
+        <ion-icon name="open" slot="start"></ion-icon>
+        Open Website
+      </ion-button>
+    </ion-card-content>
+
+  </ion-card>
 
 </ion-content>

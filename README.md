@@ -1,7 +1,7 @@
-# Ionic Angular Photostore
+# Ionic Angular InfoApp
 
 App to search for info from an API and display it using the [Ionic 4 framework](https://ionicframework.com/docs).
-Currently using a movie database to develop the app.
+Currently using a movie database API to develop the app.
 
 ## Table of contents
 
@@ -15,6 +15,8 @@ Currently using a movie database to develop the app.
 * [Contact](#contact)
 
 ## General info
+
+An active search bar enables the user to search for movies, with a list of matches appearing below. Each returned movie card can be clicked on to see more details. The API searches the [The Open Movie Database](http://www.omdbapi.com/) for search matches.
 
 ## Screenshots
 
