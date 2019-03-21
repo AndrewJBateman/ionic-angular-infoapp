@@ -1,9 +1,36 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>infoDetails</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons>
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ information?.Genre }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+
+<ion-card *ngIf="information">
+  <ion-card-header>
+    <ion-card-title>
+      {{ information.Title }}
+    </ion-card-title>
+    <ion-card-subtitle>
+      {{ information.Year }}
+    </ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content text-center>
+    <img [src]="information.Poster" class="info.img">
+      {{ information.Plot }}
+
+    <ion-item lines="none">
+      <ion-icon></ion-icon>
+      <ion-label></ion-label>
+    </ion-item>
+
+
+  </ion-card-content>
+
+</ion-card>
 
 </ion-content>

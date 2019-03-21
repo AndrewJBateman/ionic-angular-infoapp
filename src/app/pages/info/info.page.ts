@@ -11,7 +11,7 @@ import { InfoService, SearchType } from './../../services/info.service';
 export class InfoPage implements OnInit {
 
   results: Observable<any>;
-  searchTerm = '';
+  searchTerm: '';
   type: SearchType = SearchType.all;
 
   constructor(private infoService: InfoService) { }

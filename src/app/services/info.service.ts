@@ -13,10 +13,6 @@ export enum SearchType {
   episode = 'episode'
 }
 
-  const url = '';
-  const apiKey = '';
-  console.log(url);
-  console.log(apiKey);
 
 @Injectable({
   providedIn: 'root'
@@ -34,17 +30,14 @@ export class InfoService {
   // @param {SearchType} type movie, series, episode or empty
   // @returns Observable with the search results
   searchData(title: string, type: SearchType): Observable<any> {
-    return this.http.get(`${this.url}?s=${encodeURI(title)}&type=${type}&apikey=${this.apiKey}`)
-      .pipe(
-        map(results => results['search'])
+    return this.http.get(`${this.url}?s=${encodeURI(title)}&type=${type}&apikey=${this.apiKey}`).pipe(
+      map(results => results['Search'])
       );
   }
-
-  // Get the detailed information for an ID using the "i" parameter
+  // Get detailed information using the "id" parameter
   // @param {string} id imdbID to retrieve information
   // @returns Observable with detailed information
   getDetails(id) {
     return this.http.get(`${this.url}?i=${id}&plot=full&apikey=${this.apiKey}`);
   }
-
 }

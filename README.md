@@ -1,6 +1,7 @@
 # Ionic Angular Photostore
 
-App to take, store and display photos using the [Ionic 4 framework](https://ionicframework.com/docs).
+App to search for info from an API and display it using the [Ionic 4 framework](https://ionicframework.com/docs).
+Currently using a movie database to develop the app.
 
 ## Table of contents
 
@@ -17,13 +18,12 @@ App to take, store and display photos using the [Ionic 4 framework](https://ioni
 
 ## Screenshots
 
-![Home Page](./img/home-page.png)
+![Home Page](./img/info-search.png)
 
 ## Technologies
 
 * Ionic/angular - version 4.0.0
 * Ionic DevApp, to allow app to run on an iOS or Android device.
-* Cordova-sqlite-storage, an Ionic Cordova Storage Plugin - version 3.2.0
 
 ## Setup
 
@@ -32,36 +32,25 @@ App to take, store and display photos using the [Ionic 4 framework](https://ioni
 
 ## Code Examples
 
+* functions to search for info and retrieve more detailed info.
+
 ```typescript
-* takePicture() {
-    const options: CameraOptions = {
-      quality: 100,
-      destinationType: this.camera.DestinationType.DATA_URL,
-      encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE
-    };
-
-    this.camera.getPicture(options).then((imageData) => {
-      // Add new photo to gallery
-      this.photos.unshift({
-        data: 'data:image/jpeg;base64,' + imageData
-      });
-
-      // Save all photos for later viewing
-      this.storage.set('photos', this.photos);
-    }, (err) => {
-     // Handle error
-     console.log('The is a camera error: ' + err);
-    });
-
+  // Get data from the Omdb Api
+  // map the result to return only the results that we need
+  // @param {string} title Search Term
+  // @param {SearchType} type movie, series, episode or empty
+  // @returns Observable with the search results
+  searchData(title: string, type: SearchType): Observable<any> {
+    return this.http.get(`${this.url}?s=${encodeURI(title)}&type=${type}&apikey=${this.apiKey}`).pipe(
+      map(results => results['Search'])
+      );
   }
-
-  loadSaved() {
-    this.storage.get('photos').then((photos) => {
-      this.photos = photos || [];
-    });
+  // Get detailed information using the "id" parameter
+  // @param {string} id imdbID to retrieve information
+  // @returns Observable with detailed information
+  getDetails(id) {
+    return this.http.get(`${this.url}?i=${id}&plot=full&apikey=${this.apiKey}`);
   }
-
 ```
 
 ## Features
@@ -70,9 +59,9 @@ App to take, store and display photos using the [Ionic 4 framework](https://ioni
 
 ## Status & To-do list
 
-* Status: Working app. Tab 2 has acess to a phone camera and it stores & displays the photos taken. There are still tabs 1 and 3 to develop.
+* Status: Working info search, returns move info - see screen-print.
 
-* To-do: Add a lot more detail/styling to front page.
+* To-do: add code so detailed info is returned.
 
 ## Inspiration
 
