@@ -57,7 +57,7 @@ An active search bar enables the user to search for movies, with a list of match
 
 ## Features
 
-* Example 1
+* updated to latest version of angular. Dependencies updated and all dependency vulnerabilities corrected.
 
 ## Status & To-do list
 
