@@ -1,6 +1,6 @@
 # Ionic Angular InfoApp
 
-App to search for info from an API and display it using the [Ionic 4 framework](https://ionicframework.com/docs).
+App to search for info from an API and display it using the [Ionic 5 framework](https://ionicframework.com/docs).
 Currently using a movie database API to develop the app.
 
 ## Table of contents
@@ -21,10 +21,14 @@ An active search bar enables the user to search for movies, with a list of match
 ## Screenshots
 
 ![Home Page](./img/info-search.png)
+![Home Page](./img/detail.png)
 
 ## Technologies
 
-* Ionic/angular - version 4.0.0
+* [Ionic v5.7.0](https://ionicframework.com/)
+
+* [Ionic/angular v4.4.2](https://www.npmjs.com/package/@ionic/angular)
+
 * Ionic DevApp, to allow app to run on an iOS or Android device.
 
 ## Setup
@@ -61,9 +65,9 @@ An active search bar enables the user to search for movies, with a list of match
 
 ## Status & To-do list
 
-* Status: Working info search, returns move info - see screen-print.
+* Status: Working info search, returns move info and detail- see screen-prints.
 
-* To-do: add code so detailed info is returned.
+* To-do: use a different info API.
 
 ## Inspiration
 
@@ -71,4 +75,4 @@ Project inspired by [Simon Grimms's 'How to Build Your First Ionic 4 App with AP
 
 ## Contact
 
-Created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
