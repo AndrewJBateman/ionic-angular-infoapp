@@ -5,7 +5,10 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)"></ion-searchbar>
+  <ion-searchbar
+    [(ngModel)]="searchTerm"
+    (ionChange)="searchChanged($event)"
+  ></ion-searchbar>
 
   <ion-item>
     <ion-label>Select Searchtype</ion-label>
@@ -18,10 +21,13 @@
   </ion-item>
 
   <ion-list>
-
-    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'info', item.imdbID]">
+    <ion-item
+      button
+      *ngFor="let item of (results | async)"
+      [routerLink]="['/', 'info', item.imdbID]"
+    >
       <ion-avatar slot="start">
-        <img [src]="item.Poster" *ngIf="item.Poster != 'N/A'">
+        <img [src]="item.Poster" *ngIf="item.Poster != 'N/A'" />
       </ion-avatar>
 
       <ion-label text-wrap>
@@ -29,11 +35,17 @@
         {{ item.Year }}
       </ion-label>
 
-      <ion-icon slot="end" *ngIf="item.Type == 'movie'" name="videocam"></ion-icon>
+      <ion-icon
+        slot="end"
+        *ngIf="item.Type == 'movie'"
+        name="videocam"
+      ></ion-icon>
       <ion-icon slot="end" *ngIf="item.Type == 'series'" name="tv"></ion-icon>
-      <ion-icon slot="end" *ngIf="item.Type == 'game'" name="logo-game-controller-b"></ion-icon>
+      <ion-icon
+        slot="end"
+        *ngIf="item.Type == 'game'"
+        name="logo-game-controller-b"
+      ></ion-icon>
     </ion-item>
-    
   </ion-list>
-
 </ion-content>
