@@ -17,7 +17,7 @@ export class InfoPage implements OnInit {
 
 	ngOnInit() {}
 
-	searchChanged(): void {
+	searchChanged($event: Event): void {
 		this.results = this.infoService.searchData(this.searchTerm, this.type);
 	}
 }
