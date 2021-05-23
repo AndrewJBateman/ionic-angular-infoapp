@@ -1,51 +1,51 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>My Info Search</ion-title>
-  </ion-toolbar>
+	<ion-toolbar color="primary">
+		<ion-title>My Info Search</ion-title>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-searchbar
-    [(ngModel)]="searchTerm"
-    (ionChange)="searchChanged($event)"
-  ></ion-searchbar>
+	<ion-searchbar
+		[(ngModel)]="searchTerm"
+		(ionChange)="searchChanged($event)"
+	></ion-searchbar>
 
-  <ion-item>
-    <ion-label>Select Searchtype</ion-label>
-    <ion-select [(ngModel)]="type" (ionChange)="searchChanged($event)">
-      <ion-select-option value="">All</ion-select-option>
-      <ion-select-option value="movie">Movie</ion-select-option>
-      <ion-select-option value="series">Series</ion-select-option>
-      <ion-select-option value="episode">Episode</ion-select-option>
-    </ion-select>
-  </ion-item>
+	<ion-item>
+		<ion-label>Select Searchtype</ion-label>
+		<ion-select [(ngModel)]="type" (ionChange)="searchChanged($event)">
+			<ion-select-option value="">All</ion-select-option>
+			<ion-select-option value="movie">Movie</ion-select-option>
+			<ion-select-option value="series">Series</ion-select-option>
+			<ion-select-option value="episode">Episode</ion-select-option>
+		</ion-select>
+	</ion-item>
 
-  <ion-list>
-    <ion-item
-      button
-      *ngFor="let item of (results | async)"
-      [routerLink]="['/', 'info', item.imdbID]"
-    >
-      <ion-avatar slot="start">
-        <img [src]="item.Poster" *ngIf="item.Poster != 'N/A'" />
-      </ion-avatar>
+	<ion-list>
+		<ion-item
+			button
+			*ngFor="let item of (results | async)"
+			[routerLink]="['/', 'info', item.imdbID]"
+		>
+			<ion-avatar slot="start">
+				<img [src]="item.Poster" *ngIf="item.Poster != 'N/A'" />
+			</ion-avatar>
 
-      <ion-label text-wrap>
-        <h3>{{ item.Title }}</h3>
-        {{ item.Year }}
-      </ion-label>
+			<ion-label text-wrap>
+				<h3>{{ item.Title }}</h3>
+				{{ item.Year }}
+			</ion-label>
 
-      <ion-icon
-        slot="end"
-        *ngIf="item.Type == 'movie'"
-        name="videocam"
-      ></ion-icon>
-      <ion-icon slot="end" *ngIf="item.Type == 'series'" name="tv"></ion-icon>
-      <ion-icon
-        slot="end"
-        *ngIf="item.Type == 'game'"
-        name="logo-game-controller-b"
-      ></ion-icon>
-    </ion-item>
-  </ion-list>
+			<ion-icon
+				slot="end"
+				*ngIf="item.Type == 'movie'"
+				name="videocam"
+			></ion-icon>
+			<ion-icon slot="end" *ngIf="item.Type == 'series'" name="tv"></ion-icon>
+			<ion-icon
+				slot="end"
+				*ngIf="item.Type == 'game'"
+				name="logo-game-controller-b"
+			></ion-icon>
+		</ion-item>
+	</ion-list>
 </ion-content>
