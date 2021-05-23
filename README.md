@@ -2,6 +2,12 @@
 
 * App to search for info from an API and display it using the [Ionic 5 framework](https://ionicframework.com/docs).
 * Currently using a [movie database API](http://www.omdbapi.com/) to develop the app.
+* **Note:** to open web links in a new window use: _ctrl+click on link_
+
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/ionic-angular-infoapp?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/ionic-angular-infoapp?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/ionic-angular-infoapp?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/ionic-angular-infoapp?style=plastic)
 
 ## :page_facing_up: Table of contents
 
@@ -28,7 +34,7 @@
 
 * [Ionic v5](https://ionicframework.com/)
 * [Ionic/angular v5](https://www.npmjs.com/package/@ionic/angular)
-* [Angular v11](https://angular.io/) dev platform
+* [Angular v12](https://angular.io/) dev platform
 * [OMDb API](http://www.omdbapi.com/) Open Movie Database, a RESTful web service
 * Ionic DevApp, to allow app to run on an iOS or Android device.
 
@@ -82,7 +88,7 @@
 
 ## :clipboard: Status & To-do list
 
-* Status: Working. Updated april 2021
+* Status: Working. Updated may 2021
 * To-do: nothing
 
 ## :clap: Inspiration
