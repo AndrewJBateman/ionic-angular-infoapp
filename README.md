@@ -32,9 +32,9 @@
 
 ## :signal_strength: Technologies
 
-* [Ionic v5](https://ionicframework.com/)
-* [Ionic/angular v5](https://www.npmjs.com/package/@ionic/angular)
-* [Angular v12](https://angular.io/) dev platform
+* [Ionic v6](https://ionicframework.com/)
+* [Ionic/angular v6](https://www.npmjs.com/package/@ionic/angular)
+* [Angular v13](https://angular.io/) dev platform
 * [OMDb API](http://www.omdbapi.com/) Open Movie Database, a RESTful web service
 * Ionic DevApp, to allow app to run on an iOS or Android device.
 
@@ -88,7 +88,7 @@
 
 ## :clipboard: Status & To-do list
 
-* Status: Working. Updated may 2021
+* Status: Working.
 * To-do: nothing
 
 ## :clap: Inspiration
