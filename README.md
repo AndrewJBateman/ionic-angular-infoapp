@@ -1,7 +1,7 @@
 # :zap: Ionic Angular InfoApp
 
-* App to search for info from an API and display it using the [Ionic 5 framework](https://ionicframework.com/docs).
-* Currently using a [movie database API](http://www.omdbapi.com/) to develop the app.
+* App to search for info from an API and display it using the [Ionic framework](https://ionicframework.com/docs).
+* Uses a [movie database API](http://www.omdbapi.com/) to develop the app.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/ionic-angular-infoapp?style=plastic)
@@ -83,7 +83,7 @@
 
 * Working search bar
 * Ion icons look cool although I have made no attempt to optimise this app for a compact build file, otherwise I would replace with svg files
-* I added API response interface models
+* API response interface models added
 * API search function code commenting is good - I have Simon Grimm to thank for that fine example
 
 ## :clipboard: Status & To-do list
