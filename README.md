@@ -34,7 +34,7 @@
 
 * [Ionic v6](https://ionicframework.com/)
 * [Ionic/angular v6](https://www.npmjs.com/package/@ionic/angular)
-* [Angular v13](https://angular.io/) dev platform
+* [Angular v14](https://angular.io/) dev platform
 * [OMDb API](http://www.omdbapi.com/) Open Movie Database, a RESTful web service
 * Ionic DevApp, to allow app to run on an iOS or Android device.
 
