@@ -34,13 +34,13 @@
 
 * [Ionic v6](https://ionicframework.com/)
 * [Ionic/angular v6](https://www.npmjs.com/package/@ionic/angular)
-* [Angular v14](https://angular.io/) dev platform
+* [Angular v15](https://angular.io/) dev platform
 * [OMDb API](http://www.omdbapi.com/) Open Movie Database, a RESTful web service
 * Ionic DevApp, to allow app to run on an iOS or Android device.
 
 ## :floppy_disk: Setup
 
-* Get yourself an API key from the [The Open Movie Database](http://www.omdbapi.com/) - it's free :-)
+* Get yourself an API key from the [The Open Movie Database](https://www.omdbapi.com/) - it's free :-)
 * Add your movie database access credentials to `environment.ts` for dev. work
 * `npm i`
 * To start the server on _localhost://8100_ type: 'ionic serve'
