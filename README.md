@@ -11,14 +11,18 @@
 
 ## :page_facing_up: Table of contents
 
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
+* [:zap: Ionic Angular InfoApp](#zap-ionic-angular-infoapp)
+  * [:page\_facing\_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:books: General info](#books-general-info)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal\_strength: Technologies](#signal_strength-technologies)
+  * [:floppy\_disk: Setup](#floppy_disk-setup)
+  * [:computer: Code Examples](#computer-code-examples)
+  * [:cool: Features](#cool-features)
+  * [:clipboard: Status \& To-do list](#clipboard-status--to-do-list)
+  * [:clap: Inspiration](#clap-inspiration)
+  * [:file\_folder: License](#file_folder-license)
+  * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
 
@@ -32,9 +36,8 @@
 
 ## :signal_strength: Technologies
 
-* [Ionic v6](https://ionicframework.com/)
-* [Ionic/angular v6](https://www.npmjs.com/package/@ionic/angular)
-* [Angular v15](https://angular.io/) dev platform
+* [Ionic/angular v7](https://www.npmjs.com/package/@ionic/angular)
+* [Angular v16](https://angular.io/) dev platform
 * [OMDb API](http://www.omdbapi.com/) Open Movie Database, a RESTful web service
 * Ionic DevApp, to allow app to run on an iOS or Android device.
 
@@ -89,7 +92,7 @@
 ## :clipboard: Status & To-do list
 
 * Status: Working.
-* To-do: nothing
+* To-do: Nothing
 
 ## :clap: Inspiration
 
@@ -101,4 +104,4 @@
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: `gomezbateman@yahoo.com`
