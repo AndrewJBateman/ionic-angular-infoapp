@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API_URL: 'http://www.omdbapi.com/',
+  API_URL: 'https://www.omdbapi.com/',
   API_KEY: 'YOUR API KEY HERE'
 };
 
