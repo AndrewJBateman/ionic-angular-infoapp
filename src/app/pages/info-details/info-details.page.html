@@ -8,39 +8,36 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngIf="information">
+  @if (information) {
+  <ion-card>
+    <img class="info-img" alt="{{ information.Title }}" [src]="information.Poster">
     <ion-card-header>
       <ion-card-title> {{ information.Title }} </ion-card-title>
-      <ion-card-subtitle> {{ information.Year }} </ion-card-subtitle>
     </ion-card-header>
-
     <ion-card-content text-center>
-      <img [src]="information.Poster" class="info-img" />
-      {{ information.Plot }}
-
+      <ion-item lines="none">
+        <ion-icon name="megaphone-outline" slot="start"></ion-icon>
+        <ion-label>{{ information.Year }}</ion-label>
+      </ion-item>
       <ion-item lines="none">
         <ion-icon name="star-half" slot="start"></ion-icon>
         <ion-label>{{ information.imdbRating }}</ion-label>
       </ion-item>
-
       <ion-item lines="none">
-        <ion-icon name="clipboard" slot="start"></ion-icon>
+        <ion-icon name="clipboard-outline" slot="start"></ion-icon>
         <ion-label text-wrap>{{ information.Director }}</ion-label>
       </ion-item>
-
       <ion-item lines="none">
         <ion-icon name="people-circle-outline" slot="start"></ion-icon>
         <ion-label text-wrap>{{ information.Actors }}</ion-label>
       </ion-item>
-
-      <ion-button
-        expand="full"
-        (click)="openWebsite()"
-        *ngIf="information.Website && information.Website !='N/A'"
-      >
+      @if (information.Website && information.Website !='N/A') {
+      <ion-button expand="full" (click)="openWebsite()">
         <ion-icon name="open" slot="start"></ion-icon>
         Open Website
       </ion-button>
+      }
     </ion-card-content>
   </ion-card>
+  }
 </ion-content>
