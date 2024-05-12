@@ -36,8 +36,8 @@
 
 ## :signal_strength: Technologies
 
-* [Ionic/angular v7](https://www.npmjs.com/package/@ionic/angular)
-* [Angular v16](https://angular.io/) dev platform
+* [Ionic/angular v8](https://www.npmjs.com/package/@ionic/angular)
+* [Angular v17](https://angular.io/) dev platform
 * [OMDb API](http://www.omdbapi.com/) Open Movie Database, a RESTful web service
 * Ionic DevApp, to allow app to run on an iOS or Android device.
 
@@ -104,4 +104,4 @@
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: `gomezbateman@yahoo.com`
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: `gomezbateman@gmail.com`
